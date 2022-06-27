@@ -1,0 +1,17 @@
+<form method="POST" action="{% url 'again_signup' %}">
+    {% csrf_token %}
+    <h1>비밀번호를 확인해주세요</h1>
+    <p>username</p>
+    <input type="text" name="username">
+    <br>
+    <p>password</p>
+    <input type="text" name="password">
+    <br>
+    <p>confirm</p>
+    <input type="text" name="confirm">
+    <br>
+    <p>nickname</p>
+    <input type="text" name="nickname">
+    <br>
+    <input type="submit" value="회원가입">
+</form>

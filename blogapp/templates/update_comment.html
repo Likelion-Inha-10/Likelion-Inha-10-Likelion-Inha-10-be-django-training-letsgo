@@ -1,0 +1,5 @@
+<form method="Post" action=""> <!--create_comment라는 url로 넘어감-->
+    {% csrf_token %}
+    <table>{{ form }}</table>
+    <input type="submit" value="수정완료">
+</form>

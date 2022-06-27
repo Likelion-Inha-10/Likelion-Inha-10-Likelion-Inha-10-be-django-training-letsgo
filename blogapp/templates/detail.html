@@ -1,0 +1,48 @@
+<!--render 세 번째 인자로 blog_detail 넘겨줘서 사용가능-->
+<h1>제목 : {{ blog_detail.title }}</h1>
+
+<h2>별명 + MBTI : {{ blog_detail.writer.nickname }} + {{ blog_detail.writer.mbti }}</h2>
+
+<h2>날짜 : {{ blog_detail.date}}</h2>
+
+<h2>본문 : {{ blog_detail.body}}</h2>
+
+<!-- {% if blog_detail.photo %} 
+
+  
+  <img src ="{{ blog_detail.photo.url }}" alt="" height="400">
+{% endif %} -->
+
+<br/>
+{% if blog_detail.writer == request.user %}
+<button>
+<a href="{% url 'delete' blog_detail.id %}">게시글 삭제하기</a>
+</button>
+<button>
+<a href="{% url 'update' blog_detail.id %}">게시글 수정하기</a>
+</button>
+
+
+{% endif %}
+<hr>
+<h3>댓글</h3>
+<form method="Post" action="{% url 'create_comment' blog_detail.id %}"> <!--create_comment라는 url로 넘어감-->
+  {% csrf_token %}
+  {{ comment_form }}
+  <input type="submit">  <!--제출버틍-->
+</form>
+
+
+{% for comment in blog_detail.comment_set.all %}
+<p>{{ comment.writer.nickname }} + {{ comment.writer.mbti }} : {{ comment.comment }}
+  {% if comment.writer == request.user %}
+  <button>
+    <a href="{% url 'delete_comment' blog_detail.id comment.id %}">댓글 삭제하기</a>
+  </button>
+  <button>
+    <a href="{% url 'update_comment' blog_detail.id comment.id %}">댓글 수정하기</a>
+  </button>
+  {% endif %}
+</p>
+{% endfor %}
+<hr>
