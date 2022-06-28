@@ -59,7 +59,7 @@
    <h3><a href="{% url 'detail' post.id %}">{{ post.title }}<a></h3>
     <!--이 a태그를 눌렀을 때 url로 넘어감-->
     <!--근데 그 url은 detail이라는 문자열을 가지고 있고 post.id도 추가적으로 담고있는-->
-   <p>{{ post.date }}</p>
+   <p>[{{ post.writer.nickname }} ({{post.writer.mbti}})] {{ post.date }}</p>
    <!-- 블로그 객체 생성 순서에 따른 primary key: {{post.id}} -->
    <hr>
 </div>
