@@ -71,11 +71,11 @@ def again_signup(request):
 
 def mbti(request):
     if request.method == 'POST':
-        e = str(request.POST['e'])
-        s = str(request.POST['s'])
+        m = str(request.POST['m'])
+        b = str(request.POST['b'])
         t = str(request.POST['t'])
-        j = str(request.POST['j'])
-        mbti = e+s+t+j
+        i = str(request.POST['i'])
+        mbti = m+b+t+i
 
 
         # #수정

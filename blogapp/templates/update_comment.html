@@ -1,3 +1,11 @@
+<header>
+    <style>
+        *{
+            font-family: 'Noto Sans KR', sans-serif;
+        }
+    </style>
+</header>
+
 <form method="Post" action=""> <!--create_comment라는 url로 넘어감-->
     {% csrf_token %}
     <table>{{ form }}</table>

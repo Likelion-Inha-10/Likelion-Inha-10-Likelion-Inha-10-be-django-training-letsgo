@@ -1,11 +1,42 @@
+<header>
+    <style>
+        *{
+            font-family: 'Noto Sans KR', sans-serif;
+            margin: 0;
+            padding: 0;
+        }
+        .title{
+            background-color: rgb(26, 25, 29);
+            color: white;
+            padding: 1%;
+            padding-left: 15%;
+        }
+        .box{
+            background-color: aliceblue;
+            padding: 1%;
+            padding-left: 20%;
+        }
+        .menus{
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+        }
+    </style>
+</header>
+
+<h1 class="title">MBTI Community</h1>
+<div class="box">
 {% if user.is_authenticated %} 
 안녕하세요,{{ user.username}}님!  <!--로그인 됐으면 이 문자를 띄어주고-->
-<a href="{% url 'logout' %}">로그아웃</a> <br/>
+<div class="menus">
+<a href="{% url 'logout' %}">로그아웃</a>
 <a href="{% url 'home' %}">게시판으로 이동</a>
-
+</div>
 {% else%}
-<h1>로그인해주셈</h1>
-아직 로그인이 되지 않았어요..<br/>
+<div class="menus">
+로그인을 해주세요
 <a href="{% url 'login' %}">로그인</a>
 <a href="{% url 'signup' %}">회원가입</a>
+</div>
 {% endif %}
+</div>

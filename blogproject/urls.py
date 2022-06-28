@@ -58,9 +58,9 @@ urlpatterns = [
 
     path('delete/<int:blog_id>', views.delete_blog, name='delete'),
 
-    path('delete_comment/<int:blog_id>/<int:comment_id>', views.delete_comment, name='delete_comment'),
-
     path('update/<int:blog_id>', views.update, name='update'),
+    
+    path('delete_comment/<int:blog_id>/<int:comment_id>', views.delete_comment, name='delete_comment'),
 
     path('update_comment/<int:blog_id>/<int:comment_id>', views.update_comment, name='update_comment'),
 

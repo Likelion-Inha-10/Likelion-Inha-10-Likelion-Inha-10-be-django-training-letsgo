@@ -1,20 +1,28 @@
- <form action="{% url 'mbti'  %}" method = "POST">
+<header>
+  <style>
+      *{
+          font-family: 'Noto Sans KR', sans-serif;
+      }
+  </style>
+</header>
+
+<form action="{% url 'mbti'  %}" method = "POST">
     {% csrf_token %}
     사람만나는 것을 좋아한다<br>
-    <input type='radio' name='e' value='E' />yes
-    <input type='radio' name='e' value='I' />no
+    <input type='radio' name='m' value='E' />yes
+    <input type='radio' name='m' value='I' />no
     <br>
-    나는 감각적이다<br>
-    <input type='radio' name='s' value='S'/>yes
-    <input type='radio' name='s' value='N' />no
+    나는 직관적이다<br>
+    <input type='radio' name='b' value='S'/>yes
+    <input type='radio' name='b' value='N' />no
     <br>
-    나는 원칙적이다<br>
+    나는 슬픈 영화를 봐도 눈물을 흘리지 않는 편이다<br>
     <input type='radio' name='t' value='T' />yes
     <input type='radio' name='t' value='F' />no
     <br>
     나는 계획적이다<br>
-    <input type='radio' name='j' value='J'/>yes
-    <input type='radio' name='j' value='P' />no
+    <input type='radio' name='i' value='J'/>yes
+    <input type='radio' name='i' value='P' />no
     <br>
     <input type='submit'>
   </form>

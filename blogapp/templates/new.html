@@ -1,3 +1,11 @@
+<header>
+    <style>
+        *{
+            font-family: 'Noto Sans KR', sans-serif;
+        }
+    </style>
+</header>
+
 <form action="{% url 'create' %}" method='POST'> 
     {% csrf_token %} 
     <div>
