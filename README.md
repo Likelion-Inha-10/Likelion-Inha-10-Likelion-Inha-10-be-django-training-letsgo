@@ -1,5 +1,6 @@
 ## API 명세서
-![image](https://user-images.githubusercontent.com/103047410/176361405-2109d3c6-b07b-4631-aeeb-f71d080c78dc.png)
+![image](https://user-images.githubusercontent.com/103047410/176418015-4a2df8f5-80d3-4869-a90f-3fb9fac53e9c.png)
+
 
 ## DB 도식화
 ![image](https://user-images.githubusercontent.com/103047410/176361602-fa69091f-b1f7-4d9b-ae5a-2238e93ad4aa.png)
